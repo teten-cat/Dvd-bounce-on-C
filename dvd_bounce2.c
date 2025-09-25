@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
     int outputBytes = (w+1) * h;
     char output[outputBytes];
     memset(output, '#', (outputBytes-1)*sizeof(char));
-    
+    output[outputBytes-1] = '\0';
     //adding 
     for(int i = 1; i < h; i++){
         output[i*(w+1)-1] = '\n';
