@@ -78,6 +78,6 @@ int main(int argc, char *argv[]) {
 
         printDVD(output, posY, posX);
         
-        usleep(500000);
+        usleep(5000000);
     }
 }
