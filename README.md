@@ -5,5 +5,5 @@ simple DVD idle bounce
 
 does hit corners
 able to set width and height from arguments  
-./programname <width> <height>  
+./programname \<width\> \<height\>  
 unspecified default values are 40 and 10
