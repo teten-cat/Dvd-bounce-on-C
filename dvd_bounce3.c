@@ -9,6 +9,8 @@ char border = '#';
 int w = 40;
 int h = 10;
 
+int speed = 1;
+
 int id = 7;
 
 void pprint_char(char c, int n){
@@ -44,9 +46,12 @@ int Shuffle_colorid(){
 int main(int argc, char *argv[]) {
     srand(time(NULL));
 
-    if(argc == 3){
+    if(argc >= 3){
         w = atoi(argv[1]);
         h = atoi(argv[2]);
+
+        if(argc >= 4)
+            speed = atoi(argv[2]);
 
         if(w < 6 || h < 4){
             printf("incompatible size\nRequired Size:\n    Width:  6\n    Height: 4\n");
@@ -95,6 +100,6 @@ int main(int argc, char *argv[]) {
         posX += velX;
         posY += velY;
 
-        usleep(COOLDOWN_MICROSECOND);
+        usleep(COOLDOWN_MICROSECOND / speed);
     }
 }
