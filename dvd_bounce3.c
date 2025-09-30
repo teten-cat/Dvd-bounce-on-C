@@ -41,8 +41,18 @@ int Shuffle_colorid(){
     return (rand() % 256);
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     srand(time(NULL));
+
+    if(argc == 3){
+        w = atoi(argv[1]);
+        h = atoi(argv[2]);
+
+        if(w < 6 || h < 4){
+            printf("incompatible size\nRequired Size:\n    Width:  6\n    Height: 4\n");
+            exit(0);
+        }
+    }
 
     int i = 0;
 
